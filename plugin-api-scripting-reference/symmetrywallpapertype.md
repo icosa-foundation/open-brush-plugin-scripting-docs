@@ -1,25 +1,30 @@
+
 # SymmetryWallpaperType
 
 ## Summary
-
 The list of valid wallpaper symmetry types
+
 
 ## Values
 
-* p1
-* pg
-* cm
-* pm
-* p6
-* p6m
-* p3
-* p3m1
-* p31m
-* p4
-* p4m
-* p4g
-* p2
-* pgg
-* pmg
-* pmm
-* cmm
+<ul><li>p1</li>
+<li>pg</li>
+<li>cm</li>
+<li>pm</li>
+<li>p6</li>
+<li>p6m</li>
+<li>p3</li>
+<li>p3m1</li>
+<li>p31m</li>
+<li>p4</li>
+<li>p4m</li>
+<li>p4g</li>
+<li>p2</li>
+<li>pgg</li>
+<li>pmg</li>
+<li>pmm</li>
+<li>cmm</li></ul>
+
+
+
+
