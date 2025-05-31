@@ -16,4 +16,30 @@ A list of transformation matrices
 
 
 
+## Class Methods
+
+        
+### MatrixList:New(count)
+
+Creates a new MatrixList with the specified number of matrices
+
+**Returns:** <a href="matrixlist.md">MatrixList</a> 
+
+
+**Parameters:**
+
+<table data-full-width="false">
+<thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+<tbody><tr><td>count</td><td>number</td><td></td><td>The number of matrices to create</td></tr></tbody></table>
+
+
+
+
+#### Example
+
+<pre class="language-lua"><code class="lang-lua"><strong>matrixList = MatrixListApiWrapper.New(5)</strong></code></pre>
+
+
+
+    
 
