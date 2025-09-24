@@ -126,18 +126,25 @@ Opens an Explorer/Finder window outside of VR showing the user's Export folder o
 
 
 
-### App:ShowSketchesFolder()
+### App:ShowSketchesFolder(index)
 
-Opens an Explorer/Finder window outside of VR showing the user's Sketches folder on the desktop (Mac/Windows only)
+Opens an Explorer/Finder window outside of VR a folder containing a given sketch (Mac/Windows only)
 
 **Returns:** nil 
+
+
+**Parameters:**
+
+<table data-full-width="false">
+<thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+<tbody><tr><td>index</td><td>number</td><td></td><td>The index of the sketch (0 being the most recent, then 1 and so on)</td></tr></tbody></table>
 
 
 
 
 #### Example
 
-<pre class="language-lua"><code class="lang-lua"><strong>App:ShowSketchesFolder()</strong></code></pre>
+<pre class="language-lua"><code class="lang-lua"><strong>App:ShowSketchesFolder(index)</strong></code></pre>
 
 
 

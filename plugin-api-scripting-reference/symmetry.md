@@ -353,7 +353,7 @@ Gets the list of symmetry pointer brushes as brush GUIDs
 
 ### Symmetry:PathToPolar(path)
 
-Converts a path to a format suitable for using as a symmetry path
+Converts a path to a format suitable for using as a symmetry path in polar mode
 
 **Returns:** <a href="path.md">Path</a> 
 
@@ -370,6 +370,163 @@ Converts a path to a format suitable for using as a symmetry path
 #### Example
 
 <pre class="language-lua"><code class="lang-lua"><strong>pointers = Symmetry:PathToPolar(myPath):OnY()</strong></code></pre>
+
+
+
+
+### Symmetry:SetPointerPaintMode(pointerIndex, mode)
+
+Sets the painting override for a scripted pointer.
+
+**Returns:** nil 
+
+
+**Parameters:**
+
+<table data-full-width="false">
+<thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+<tbody><tr><td>pointerIndex</td><td>number</td><td></td><td>Zero-based pointer index matching the transform order returned by the symmetry script.</td></tr>
+<tr><td>mode</td><td><a href="symmetrypointerpaintmode.md">SymmetryPointerPaintMode</a></td><td></td><td>The override to apply to the pointer.</td></tr></tbody></table>
+
+
+
+
+#### Example
+
+<pre class="language-lua"><code class="lang-lua"><strong>Symmetry:SetPointerPaintMode(0, SymmetryPointerPaintMode.ForcedOn)</strong></code></pre>
+
+
+
+
+### Symmetry:GetPointerPaintMode(pointerIndex)
+
+Gets the current painting override for a scripted pointer.
+
+**Returns:** <a href="symmetrypointerpaintmode.md">SymmetryPointerPaintMode</a> 
+
+
+**Parameters:**
+
+<table data-full-width="false">
+<thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+<tbody><tr><td>pointerIndex</td><td>number</td><td></td><td>Zero-based pointer index matching the transform order returned by the symmetry script.</td></tr></tbody></table>
+
+
+
+
+#### Example
+
+<pre class="language-lua"><code class="lang-lua"><strong>local mode = Symmetry:GetPointerPaintMode(0)</strong></code></pre>
+
+
+
+
+### Symmetry:GetPointerPaintModes()
+
+Returns the painting overrides for all active scripted pointers.
+
+**Returns:** <a href="system.collections.generic.list`1[symmetrypointerpaintmode].md">System.Collections.Generic.List`1[SymmetryPointerPaintMode]</a> 
+
+
+
+
+#### Example
+
+<pre class="language-lua"><code class="lang-lua"><strong>for i, mode in ipairs(Symmetry:GetPointerPaintModes()) do
+  print(i, mode)
+end</strong></code></pre>
+
+
+
+
+### Symmetry:StartPointer(pointerIndex)
+
+Convenience helper that forces a scripted pointer to start painting.
+
+**Returns:** nil 
+
+
+**Parameters:**
+
+<table data-full-width="false">
+<thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+<tbody><tr><td>pointerIndex</td><td>number</td><td></td><td>Zero-based pointer index matching the transform order returned by the symmetry script.</td></tr></tbody></table>
+
+
+
+
+#### Example
+
+<pre class="language-lua"><code class="lang-lua"><strong>Symmetry:StartPointer(1)</strong></code></pre>
+
+
+
+
+### Symmetry:StopPointer(pointerIndex)
+
+Convenience helper that forces a scripted pointer to stop painting.
+
+**Returns:** nil 
+
+
+**Parameters:**
+
+<table data-full-width="false">
+<thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+<tbody><tr><td>pointerIndex</td><td>number</td><td></td><td>Zero-based pointer index matching the transform order returned by the symmetry script.</td></tr></tbody></table>
+
+
+
+
+#### Example
+
+<pre class="language-lua"><code class="lang-lua"><strong>Symmetry:StopPointer(1)</strong></code></pre>
+
+
+
+
+### Symmetry:ForcePointerNewStroke(pointerIndex)
+
+Detaches the current stroke for a scripted pointer and immediately begins a new one if the pointer remains enabled.
+
+**Returns:** nil 
+
+
+**Parameters:**
+
+<table data-full-width="false">
+<thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+<tbody><tr><td>pointerIndex</td><td>number</td><td></td><td>Zero-based pointer index matching the transform order returned by the symmetry script.</td></tr></tbody></table>
+
+
+
+
+#### Example
+
+<pre class="language-lua"><code class="lang-lua"><strong>Symmetry:ForcePointerNewStroke(0)</strong></code></pre>
+
+
+
+
+### Symmetry:ApplyToPath(path)
+
+Creates multiple copies of a path based on the current symmetry settings
+
+**Returns:** <a href="pathlist.md">PathList</a> 
+
+
+**Parameters:**
+
+<table data-full-width="false">
+<thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+<tbody><tr><td>path</td><td><a href="path.md">Path</a></td><td></td><td>The path to duplicate</td></tr></tbody></table>
+
+
+
+
+#### Example
+
+<pre class="language-lua"><code class="lang-lua"><strong>pathList = Symmetry:ApplyToPath(myPath)</strong></code></pre>
 
 
 
